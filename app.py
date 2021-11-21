@@ -14,9 +14,6 @@ app = Flask(__name__)  # intitialize the flaks app  # common
 import os
 from flask import send_from_directory
 
-#ratingsMatrix = joblib.load('user_rating.pkl')
-#productClass = joblib.load('sentiment_class.pkl')
-
 @app.route('/')
 def home():
     return render_template('index.html')
