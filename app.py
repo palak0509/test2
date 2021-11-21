@@ -6,8 +6,13 @@ import pandas as pd
 
 # Flask utils
 from flask import Flask, redirect, url_for, request, render_template, jsonify
+from model import Recommendation
 
-app = Flask(__name__)
+recommend = Recommendation()
+app = Flask(__name__)  # intitialize the flaks app  # common
+
+import os
+from flask import send_from_directory
 
 #ratingsMatrix = joblib.load('user_rating.pkl')
 #productClass = joblib.load('sentiment_class.pkl')
